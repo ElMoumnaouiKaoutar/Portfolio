@@ -30,7 +30,7 @@ const Experience = () => {
               <motion.div className="listContainer" key={exp.id}>
                 <motion.div
                   className="box"
-                  whileHover={{ background: "lightgray", color: "black" }}
+                  // whileHover={{ background: "lightgray", color: "black" }}
                 >
                   <h3>{exp.date}</h3>
                   <h2>{exp.title}</h2>

@@ -8,7 +8,7 @@ const Skills = () => {
       { name: "Spring Boot", icon: <SiSpringboot />, color: "#6DB33F" },
       { name: "React.js", icon: <SiReact />, color: "#61DAFB" },
       { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
-      // { name: "Java", icon: <SiJava />, color: "#007396" },
+      { name: "Java", icon: <img src="/javaicon.png" alt="Java" style={{ width: '1em', height: '1em' }} />, color: "#007396" },
       { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
       { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
       { name: "CSS", icon: <SiCss3 />, color: "#1572B6" },
@@ -36,7 +36,6 @@ const Skills = () => {
             <div className="skills-container">
                 <motion.div
                     className="skills-marquee"
-                    // animate={{ x: ["0%", "-100%"] }}
                 >
                     {repeatedSkills.map((skill, index) => (
                         <div key={index} className="skill-card">

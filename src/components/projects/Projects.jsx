@@ -5,47 +5,60 @@ import {motion, useScroll, useSpring, useTransform} from "framer-motion"
 const items = [
   {
     id: 1,
-    title: "Application Web 'SmartHealth'",
+    title: "SmartHealth Web Application",
+    role: "Full Stack Developer",
+    date: "Dec. 2023",
     img: "/baground.jpg",
-    desc: "Déc. 2023 - Rôle : Développeuse Principale - Conception et mise en œuvre d’une application web pour le suivi des patients, optimisée pour réduire les erreurs de saisie des données grâce à l’utilisation du stack MERN.",
+    desc: "Design and implementation of a web application for patient monitoring, optimized to reduce data entry errors using the MERN stack.",
     tools: "MERN (MongoDB, Express.js, React.js, Node.js)"
   },
   {
     id: 2,
-    title: "Plateforme de Monitoring",
-    img: "/baground.jpg",
-    desc: "Oct. 2023 - Rôle : Développeuse - Développement d’un système de gestion des journaux, permettant une analyse en temps réel et optimisant le temps de dépannage grâce à l’utilisation de JEE, MongoDB, Neo4j, Hadoop et SQL.",
+    title: "Monitoring Platform",
+    role: "Full Stack Developer",
+    date: "Oct. 2023",
+    img: "/monitoring.jpg",
+    desc: "Development of a log management system, enabling real-time analysis and optimizing troubleshooting time using JEE, MongoDB, Neo4j, Hadoop, and SQL.",
     tools: "JEE, MongoDB, Neo4j, Hadoop, SQL"
   },
   {
     id: 3,
-    title: "Site Web 'MiniFacebook'",
-    img: "/baground.jpg",
-    desc: "Oct. 2023 - Rôle : Développeuse Full Stack - Création d’une application de réseau social avec un chatbot ChatGPT intégré, favorisant l’engagement des utilisateurs grâce à l’utilisation de Spring Boot, Next.js, Tailwind CSS et MySQL.",
+    title: "MiniFacebook Website",
+    role: "Full Stack Developer",
+    date: "Oct. 2023",
+    img: "/facebook.jpg",
+    desc: "Creation of a social networking application with an integrated ChatGPT chatbot, enhancing user engagement using Spring Boot, Next.js, Tailwind CSS, and MySQL.",
     tools: "Spring Boot, Next.js, Tailwind CSS, MySQL"
   },
   {
     id: 4,
-    title: "Application de Gestion des Réservations de Billets",
-    img: "/baground.jpg",
-    desc: "Mai 2023 - Rôle : Développeuse - Création d’une application de gestion des réservations de billets, améliorant l’efficacité des réservations grâce à une version web développée en Java et une version mobile pour Android.",
-    tools: "Java (version web), Android (version mobile)"
+    title: "Ticket Reservation Management Application",
+    role: "Full Stack Developer",
+    date: "May 2023",
+    img: "/ticket.png",
+    desc: "Creation of a ticket reservation management application, improving booking efficiency with a web version developed in Java and a mobile version for Android.",
+    tools: "Java (web version), Android (mobile version)"
   },
   {
     id: 5,
-    title: "Application de Classification et Prédiction de la Qualité des Fruits",
-    img: "/baground.jpg",
-    desc: "Mai 2023 - Rôle : Développeuse - Implémentation d’une application web pour la prédiction de la qualité des fruits, offrant une classification précise grâce à l’utilisation de Python, Flask, TensorFlow/Keras et Pillow.",
+    title: "Fruit Quality Classification and Prediction Application",
+    role: "Full Stack Developer",
+    date: "May 2023",
+    img: "/fruit.jpeg",
+    desc: "Implementation of a web application for fruit quality prediction, providing accurate classification using Python, Flask, TensorFlow/Keras, and Pillow.",
     tools: "Python, Flask, TensorFlow/Keras, Pillow"
   },
   {
     id: 6,
-    title: "Plateforme 3D pour l’Artisanat Marocain 'MaroCraft'",
-    img: "/baground.jpg",
-    desc: "Mars 2023 - Rôle : Développeuse Frontend et Backend - Développement d’une plateforme 3D pour présenter l’artisanat marocain, améliorant la visibilité en ligne grâce à l’utilisation de React.js, JavaScript, Three.js, Node.js, PostgreSQL et Blender.",
+    title: "3D Platform for Moroccan Crafts 'MaroCraft'",
+    role: "Full Stack Developer",
+    date: "Mar. 2023",
+    img: "/artisanat.jpg",
+    desc: "Development of a 3D platform to showcase Moroccan crafts, enhancing online visibility using React.js, JavaScript, Three.js, Node.js, PostgreSQL, and Blender.",
     tools: "React.js, JavaScript, Three.js, Node.js, PostgreSQL, Blender"
   }
 ];
+
 
 
 const Single = ({item})=>{
@@ -53,7 +66,6 @@ const Single = ({item})=>{
 
   const {scrollYProgress}=useScroll({
     target: ref,
-    // offset: ["start start", "end start"]
    });
   
   const y = useTransform(scrollYProgress, [0,1], [-300, 300]); 
@@ -68,8 +80,11 @@ const Single = ({item})=>{
         
         <motion.div className="textContainer" style={{y}}>
           <h2>{item.title}</h2>
-          <p>{item.desc}</p>
-          <p>{item.tools}</p>
+          <p><strong>My role:</strong> {item.role}</p>
+          <p><strong>Date: </strong>{item.date}</p>
+          <p><strong>Description: </strong>{item.desc}</p>
+          <p><strong>Tools:</strong> {item.tools}</p>
+          {/* <button>DEMO</button> */}
         </motion.div>
         </div>
       </div>

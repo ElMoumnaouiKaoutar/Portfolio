@@ -1,5 +1,7 @@
 import Sidebar from "../sidebar/Sidebar"
 import "./navbar.scss"
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FiInstagram } from 'react-icons/fi';
 import {motion} from "framer-motion"
 
 const Navbar = () => {
@@ -16,11 +18,9 @@ const Navbar = () => {
             kaoutar
         </motion.span>
         <div className="social">
-            <a href="#"><img src="/public/facebook.png"></img></a>
-            <a href="#"><img src="/public/instagram.png"></img></a>
-            <a href="#"><img src="/public/youtube.png"></img></a>
-            <a href="#"><img src="/public/facebook.png"></img></a>
-
+            <a href="https://www.linkedin.com/in/kaoutarelmoumnaoui"><FaLinkedinIn size={24} /></a>
+            <a href="https://www.instagram.com/_kaoutar_el_moumnaoui_/"><FiInstagram size={24} /></a>
+            <a href="https://www.github.com/elmoumnaouikaoutar"><FaGithub size={24} /></a>
         </div>
       </div>
     </div>

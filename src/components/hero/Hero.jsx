@@ -50,6 +50,13 @@ const Hero = () => {
         link.click();
         document.body.removeChild(link);
     };
+
+    const contactMe=()=>{
+        const contactSection = document.getElementById("Contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
   return (
     <div className="hero">
         <div className="wrapper">
@@ -62,7 +69,7 @@ const Hero = () => {
             <motion.h1 variants={textVariants}>FULLSTACK developer</motion.h1>
             <motion.div className="buttons" variants={textVariants}>
                 <motion.button variants={textVariants} onClick={onButtonClick}>GET RESUME</motion.button>
-                <motion.button variants={textVariants}>Contact Me</motion.button>
+                <motion.button variants={textVariants} onClick={contactMe}>Contact Me</motion.button>
             </motion.div>
             <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton" />
         </motion.div>

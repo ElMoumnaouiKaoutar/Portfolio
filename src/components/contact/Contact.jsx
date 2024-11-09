@@ -37,7 +37,7 @@ const Contact = () => {
     };
 
   return (
-    <motion.div className="contact" variants={variants} initial="initial" whileInView="animate">
+    <motion.div id="Contact" className="contact" variants={variants} initial="initial" whileInView="animate">
         <motion.div className="textContainer" variants={variants}>
             <motion.h1 variants={variants}>CONTACT WITH ME</motion.h1>
             <motion.div className="item">
